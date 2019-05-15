@@ -1,4 +1,4 @@
-SetTitleMatchMode, 2
+﻿SetTitleMatchMode, 2
 #IfWinActive PowerPoint
 !1::
 	ppt:=ComObjActive("PowerPoint.Application")	
@@ -24,4 +24,8 @@ SetTitleMatchMode, 2
 	ppt:=ComObjActive("PowerPoint.Application")	
 	SR:=ppt.ActiveWindow.Selection.ShapeRange.Align(2,0)
 	return
+#IfWinActive Windows PowerShell ISE
+F9::Send, {F8}
+F12::Send, {F9}
+
 
