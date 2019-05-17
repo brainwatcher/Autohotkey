@@ -1,0 +1,1 @@
+﻿Measure-Command -Expression {.\main_exe.ps1} | Select-Object TotalSeconds -ExpandProperty TotalSeconds
