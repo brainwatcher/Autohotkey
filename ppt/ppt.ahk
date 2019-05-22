@@ -24,4 +24,8 @@ SetTitleMatchMode, 2
 	ppt:=ComObjActive("PowerPoint.Application")	
 	SR:=ppt.ActiveWindow.Selection.ShapeRange.Align(2,0)
 	return
+!t::
+	ppt:= ComObjActive("PowerPoint.Application")
+	ppt.CommandBars.ExecuteMso("TextBoxInsert")
+	return
 

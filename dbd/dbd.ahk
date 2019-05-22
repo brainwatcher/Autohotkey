@@ -1,5 +1,6 @@
-﻿#IfWinActive DeadByDaylight
-;#IfWinActive test.txt - 记事本
+﻿SetTitleMatchMode, 2
+#IfWinActive DeadByDaylight
+;#IfWinActive text.txt - Notepad
 	WinW := WinH := 10
     WinX1 := A_ScreenWidth - WinW -10
 	Gui,+AlwaysOnTop +E0x08000000
@@ -10,7 +11,7 @@
     mark := false
 	tmax := 139
 	tmin := 55
-	return
+return
 	
 #maxThreadsPerHotkey, 2 ; normal repair
 seton1:=0
@@ -101,3 +102,6 @@ t::
 		Gui, Hide
 	}
 return
+F12:: 
+	Run, Powershell "Stop-Process -Name "DeadByDaylight-Win64-Shipping" -Force"
+return	
